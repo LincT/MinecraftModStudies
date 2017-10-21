@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/primaMod.iml" filepath="$PROJECT_DIR$/primaMod.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/primaMod_api.iml" filepath="$PROJECT_DIR$/.idea/modules/primaMod_api.iml" group="primaMod" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/primaMod_main.iml" filepath="$PROJECT_DIR$/.idea/modules/primaMod_main.iml" group="primaMod" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/primaMod_test.iml" filepath="$PROJECT_DIR$/.idea/modules/primaMod_test.iml" group="primaMod" />
+    </modules>
+  </component>
+</project>
