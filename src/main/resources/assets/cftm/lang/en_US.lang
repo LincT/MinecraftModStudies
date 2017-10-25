@@ -1,4 +1,6 @@
 item.ItemTable.name=Table
+item.ItemCheeseStick.name=Cheese Stick
+
 item.ItemCheese.name=Cheese
 item.ItemGrilledCheese.name=GrilledCheese
 
@@ -6,8 +8,15 @@ item.ItemCheeseSword.name=Cheese Sword
 item.ItemCheeseAxe.name=Cheese Axe
 item.ItemCheeseShovel.name=Cheese Shovel
 item.ItemCheeseHoe.name=Cheese Hoe
-item.ItemCheesePickAxe.name=Cheese PickAxe
+item.ItemCheesePickaxe.name=Cheese PickAxe
+
+item.ItemCheeseLeggings.name=Cheese Leggings
+item.ItemCheeseHelm.name=Cheese Helm
+item.ItemCheeseChest.name=Cheese Chest Plate
+item.ItemCheeseBoots.name=Cheese Boots
 
 tile.BlockTable.name=Table
+tile.BlockCheese.name=Cheese Block
+tile.BlockGUI.name=GUI Test
 
 itemGroup.CrayfishTutorial=Crayfish Tutorial
