@@ -1,5 +1,6 @@
 package tutorial.crayfish;
 
+
 import net.minecraft.entity.Entity;
 import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemStack;
@@ -10,10 +11,8 @@ public class ItemCheeseArmor extends ItemArmor {
     }
     @Override
     public String getArmorTexture(ItemStack stack, Entity entity,int slot, String type){
-        if (this.armorType == 2){
-            return "cftm:textures/models/armor/cheese_layer_2.png";
-
-        }
-        return "cftm:textures/models/armor/cheese_layer_1.png";
+        //from class on 24/Oct/2017
+        return TutorialMod.MODID + ":textures/armor/cheese_layer_" + (this.armorType == 2 ? "2" : "1")+".png";
     }
+
 }

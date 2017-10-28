@@ -25,8 +25,11 @@
 //        super(worldServer);
 //        this.worldServerInstance = worldServer;
 //        this.random = new Random(worldServer.getSeed());
+//
 //    }
 //    public void placeInPortal(Entity entity, double par2, double par4, double par6, float par8){
+//
+//        //if we're not in the end, and a portal doesn't exist in destination, create portal.
 //
 //        if(this.worldServerInstance.provider.dimensionId != 1){
 //            if(!this.placeInExistingPortal(entity, par2, par4, par6, par8)){

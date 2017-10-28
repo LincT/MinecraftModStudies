@@ -10,7 +10,7 @@
 //import net.minecraft.util.AxisAlignedBB;
 //import net.minecraft.world.World;
 //import tutorial.crayfish.TutorialMod;
-//import tutorial.crayfish.didactic.DimensionRegistry;
+//
 //
 //import java.util.Random;
 //
@@ -18,8 +18,11 @@
 //
 //public class BlockArenaPortal extends BlockPortal {
 //    Block testBlock = TutorialMod.blockTable;
+//    //int dimensionId = DimensionRegistry.dimensionId;
+//    private int dimensionId = 1,home = -1;
 //    public BlockArenaPortal() {
 //        super();
+//        this.setCreativeTab(TutorialMod.tabcftm);
 //    }
 //
 //    public void updateTick(World world, int x, int y, int z, Random random){
@@ -29,8 +32,8 @@
 //
 //    @Override
 //    public AxisAlignedBB getCollisionBoundingBoxFromPool(World world, int x, int y, int z) {
-//        //return super.getCollisionBoundingBoxFromPool(world, x, y, z);
-//        return null;
+//        return super.getCollisionBoundingBoxFromPool(world, x, y, z);
+//        //return null;
 //    }
 //
 //    @Override
@@ -100,19 +103,19 @@
 //                if(thePlayer.timeUntilPortal > 0){
 //                    thePlayer.timeUntilPortal = 10;
 //
-//                }else if(thePlayer.dimension != DimensionRegistry.dimensionId){
+//                }else if(thePlayer.dimension != dimensionId){
 //                    thePlayer.timeUntilPortal = 10;
 //                    thePlayer.mcServer.getConfigurationManager()
 //                            .transferPlayerToDimension(thePlayer,
-//                                    DimensionRegistry.dimensionId,
+//                                    dimensionId,
 //                                    new TeleporterPrima(
-//                                            server.worldServerForDimension(DimensionRegistry.dimensionId)));
+//                                            server.worldServerForDimension(dimensionId)));
 //
 //                }else{
 //                    thePlayer.timeUntilPortal = 10;
 //                    thePlayer.mcServer.getConfigurationManager()
 //                            .transferPlayerToDimension(thePlayer,
-//                                    0, new TeleporterPrima(
+//                                    home, new TeleporterPrima(
 //                                            server.worldServerForDimension(0)));
 //                }
 //

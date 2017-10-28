@@ -10,7 +10,7 @@
 //    }
 //
 //    public void registerWorldChunkManager(){
-//        this.worldChunkMgr = new WorldChunkManagerHell(BiomeGenEnd.sky,0.00F);
+//        this.worldChunkMgr = new WorldChunkManagerHell(BiomeGenEnd.deepOcean,0.00F);
 //        this.dimensionId = DimensionRegistry.dimensionId;
 //    }
 //

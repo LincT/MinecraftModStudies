@@ -17,14 +17,19 @@ import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemFood;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.util.EnumHelper;
-import tutorial.crayfish.didactic.BlockArenaPortal;
+//import tutorial.crayfish.didactic.BlockArenaPortal;
 import tutorial.crayfish.didactic.CommandTutorial;
 import tutorial.crayfish.didactic.GUIBlock;
 
 
-@Mod(modid = "cftm",name = "Tutorial Mod",version = "1.0")
+@Mod(modid = TutorialMod.MODID,name = TutorialMod.NAME,version = TutorialMod.VERSION)
+
 
 public class TutorialMod {
+    //put annotation variables in a class so we can also call them in code.
+    public final static String MODID = "cftm";
+    public final static String NAME = "Tutorial Mod";
+    public final static String VERSION = "1.0";
 
     // wash rinse repeat for each item.
     // public static Item itemName (must be static)
@@ -55,7 +60,8 @@ public class TutorialMod {
 
     //blocks
     public static Block blockCheese;
-    public static Block blockArenaPortal;
+//    public static Block blockArenaPortal;
+//    public static Block myBlock;
 
     public static final Item.ToolMaterial cheeseToolMaterial =
             EnumHelper.addToolMaterial(
@@ -84,6 +90,7 @@ public class TutorialMod {
     public static Block blockTable; //like items but with blocks
     public static Block guiBlock;
 
+
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent event){
         //item/block init and reg.
@@ -92,7 +99,7 @@ public class TutorialMod {
         //Items
         itemTable = new ItemTable().setUnlocalizedName("ItemTable") //item.itemTable
         //can be tacked onto end of above line, newline for reference. naming is modid:imgName, no extension
-                .setTextureName("cftm:itemtable")
+                .setTextureName(TutorialMod.MODID + ":"+ TutorialMod.itemTable.getUnlocalizedName().toLowerCase().substring(5))
                 //substring 5 returns itemTable (item.itemTable - item.)
                 .setCreativeTab(tabcftm);
 
@@ -171,9 +178,9 @@ public class TutorialMod {
 
         GameRegistry.registerItem(itemGrilledCheese,itemGrilledCheese.getUnlocalizedName().substring(5));
 
-        GameRegistry.registerWorldGenerator(
-                //TODO figure out weight parameter
-                new CheeseGeneration(),0);
+//        GameRegistry.registerWorldGenerator(
+//                //TODO figure out weight parameter
+//                new CheeseGeneration(),0);
 
 
         //Blocks
@@ -187,19 +194,27 @@ public class TutorialMod {
                 .setCreativeTab(tabcftm)
                 .setBlockTextureName("cftm:blockcheese");
 
-        guiBlock = new GUIBlock(Material.glass)
+        guiBlock = new GUIBlock(Material.iron)
                 .setBlockName("BlockGUI")
                 .setCreativeTab(tabcftm);
 
-        blockArenaPortal = new BlockArenaPortal()
-                .setBlockName("BlockArenaPortal")
-                .setCreativeTab(tabcftm)
-                .setBlockTextureName("portal");
+//        blockArenaPortal = new BlockArenaPortal()
+//                .setBlockName("BlockArenaPortal")
+//                .setCreativeTab(tabcftm)
+//                .setBlockTextureName("portal");
+//
+//        myBlock = new MyBlock(Material.iron)
+//                .setBlockName("myBlock")
+//                .setCreativeTab(tabcftm)
+//                .setBlockTextureName("stone");
 
         //register block
         GameRegistry.registerBlock(blockTable,blockTable.getUnlocalizedName().substring(5));
         GameRegistry.registerBlock(blockCheese,blockCheese.getUnlocalizedName().substring(5));
         GameRegistry.registerBlock(guiBlock,guiBlock.getUnlocalizedName().substring(5));
+//        GameRegistry.registerBlock(myBlock,myBlock.getUnlocalizedName().substring(5));
+//        GameRegistry.registerBlock(blockArenaPortal,blockArenaPortal.getUnlocalizedName().substring(5));
+        //GameRegistry.registerBlock(name,name.getUnlocalizedName().substring(5));
 
     }
     @Mod.EventHandler

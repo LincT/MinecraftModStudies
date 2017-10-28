@@ -3,6 +3,7 @@ package tutorial.crayfish.didactic;
 import net.minecraft.command.ICommand;
 import net.minecraft.command.ICommandSender;
 import net.minecraft.util.ChatComponentText;
+import tutorial.crayfish.TutorialMod;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -18,20 +19,29 @@ public class CommandTutorial implements ICommand{
 
     @Override
     public String getCommandUsage(ICommandSender p_71518_1_) {
-        return "Just type hello. Simple test command";
+        return "Hello: Just type hello. Simple test command";
     }
 
     @Override
     public List getCommandAliases() {
         ArrayList alias = new ArrayList();
         alias.add("hello");
+        alias.add("hi");
         return alias;
     }
 
     @Override
     public void processCommand(ICommandSender sender, String[] args) {
-        String message = "Hello " + sender.getCommandSenderName().toString();
+
+        //newlines don't work, so need to call a new line for each line we add.
+        String message = "Hello " + sender.getCommandSenderName().toString()+"!";
+        System.out.println("ModID: " + TutorialMod.MODID +
+                "\nItem Class test: "+TutorialMod.cheeseChestPlate.getClass().toString()+
+                "\ntexture model string test: " + TutorialMod.MODID + ":textures/armor/cheese_layer_");
+
+
         sender.addChatMessage(new ChatComponentText(message));
+
 
     }
 
@@ -44,11 +54,13 @@ public class CommandTutorial implements ICommand{
     public List addTabCompletionOptions(ICommandSender p_71516_1_, String[] p_71516_2_) {
         ArrayList tabcompletes = new ArrayList();
         tabcompletes.add("Hello");
+        tabcompletes.add("h");
+        tabcompletes.add("H");
         return tabcompletes;
     }
 
     @Override
-    public boolean isUsernameIndex(String[] p_82358_1_, int p_82358_2_) {
+    public boolean isUsernameIndex(String[] strings, int i) {
         return false;
     }
 

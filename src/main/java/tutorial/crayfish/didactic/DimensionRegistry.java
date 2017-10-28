@@ -13,7 +13,7 @@
 //    public static final int dimensionId = 88;
 //
 //    public static void registerDimension(){
-//        DimensionManager.registerProviderType(dimensionId, WorldProviderPrima.class,false);
+//        DimensionManager.registerProviderType(dimensionId, WorldProviderEnd.class,false);
 //        DimensionManager.registerDimension(dimensionId,dimensionId);
 //    }
 //}
