@@ -7,7 +7,7 @@ import net.minecraft.util.IIcon;
 
 public class GUIBlock extends Block {
 
-    public IIcon[] icons = new IIcon[6];
+    private IIcon[] icons = new IIcon[6];
 
     public GUIBlock( Material material)
     {

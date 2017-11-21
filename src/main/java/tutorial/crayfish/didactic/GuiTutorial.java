@@ -4,9 +4,9 @@ import net.minecraft.client.gui.GuiScreen;
 import net.minecraft.client.gui.GuiButton;
 
 public class GuiTutorial extends GuiScreen {
-    GuiButton a = new GuiButton(0, this.width / 2 - 100,
+    private GuiButton a = new GuiButton(0, this.width / 2 - 100,
             this.height / 2 - 24, "This is button a");
-    GuiButton b = new GuiButton(1, this.width / 2 - 100,
+    private GuiButton b = new GuiButton(1, this.width / 2 - 100,
             this.height / 2 + 4, "This is button b");
 
     @Override
@@ -20,8 +20,8 @@ public class GuiTutorial extends GuiScreen {
     }
     @Override
     public void initGui() {
-        this.buttonList.add(a);
-        this.buttonList.add(b);
+        final boolean add = this.buttonList.add(a);
+        boolean add1 = this.buttonList.add(b);
     }
     @Override
     protected void actionPerformed(GuiButton button) {

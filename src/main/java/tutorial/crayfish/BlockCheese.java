@@ -5,6 +5,8 @@ import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.Item;
 import net.minecraft.world.World;
+import tutorial.crayfish.tutorial.crayfish.ItemRegister;
+
 import java.util.Random;
 
 
@@ -48,7 +50,7 @@ public class BlockCheese extends Block {
     @Override
     public Item getItemDropped(int metadata,Random random, int fortune){
         this.metadata = metadata;
-        return TutorialMod.itemCheese;
+        return ItemRegister.itemCheese;
     }
     @Override
     public int damageDropped(int metadata) {

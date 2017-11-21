@@ -4,6 +4,7 @@ import net.minecraft.command.ICommand;
 import net.minecraft.command.ICommandSender;
 import net.minecraft.util.ChatComponentText;
 import tutorial.crayfish.TutorialMod;
+import tutorial.crayfish.tutorial.crayfish.ArmorRegister;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -36,7 +37,7 @@ public class CommandTutorial implements ICommand{
         //newlines don't work, so need to call a new line for each line we add.
         String message = "Hello " + sender.getCommandSenderName().toString()+"!";
         System.out.println("ModID: " + TutorialMod.MODID +
-                "\nItem Class test: "+TutorialMod.cheeseChestPlate.getClass().toString()+
+                "\nItem Class test: "+ ArmorRegister.cheeseChestPlate.getClass().toString()+
                 "\ntexture model string test: " + TutorialMod.MODID + ":textures/armor/cheese_layer_");
 
 

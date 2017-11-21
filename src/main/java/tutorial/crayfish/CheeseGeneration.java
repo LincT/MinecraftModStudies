@@ -6,11 +6,12 @@ import net.minecraft.init.Blocks;
 import net.minecraft.world.World;
 import net.minecraft.world.chunk.IChunkProvider;
 import net.minecraft.world.gen.feature.WorldGenMinable;
+import tutorial.crayfish.tutorial.crayfish.BlockRegister;
 
 import java.util.Random;
 
 public class CheeseGeneration implements IWorldGenerator {
-    public CheeseGeneration() {
+    CheeseGeneration() {
     }
 
     @Override
@@ -32,22 +33,22 @@ public class CheeseGeneration implements IWorldGenerator {
     }
 
 
-    public void generateOverWorld(World world,Random random,int x,int z){
-        generateOre(TutorialMod.blockCheese,world,random,x,z,
+    private void generateOverWorld(World world, Random random, int x, int z){
+        generateOre(BlockRegister.blockCheese,world,random,x,z,
                 2,10,5,11,100, Blocks.sandstone);
     }
 
-    public void generateNether(World world,Random random,int x,int z){
-        generateOre(TutorialMod.blockCheese,world,random,x,z,
+    private void generateNether(World world, Random random, int x, int z){
+        generateOre(BlockRegister.blockCheese,world,random,x,z,
                 2,10,5,11,100, Blocks.netherrack);
     }
 
-    public void generateEnd(World world,Random random,int x,int z){
-        generateOre(TutorialMod.blockCheese,world,random,x,z,
+    private void generateEnd(World world, Random random, int x, int z){
+        generateOre(BlockRegister.blockCheese,world,random,x,z,
                 2,10,5,11,100, Blocks.end_stone);
     }
-    public void generateOre(Block block, World world, Random random, int chunkX, int chunkZ, int minVeinSize,
-                            int maxVeinSize,int chance, int minY, int maxY,Block generateIn){
+    private void generateOre(Block block, World world, Random random, int chunkX, int chunkZ, int minVeinSize,
+                             int maxVeinSize, int chance, int minY, int maxY, Block generateIn){
         int veinSize = minVeinSize + random.nextInt(maxVeinSize-minVeinSize);
         int heightRange = minY + random.nextInt(maxY-minY);
 
